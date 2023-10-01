@@ -58,7 +58,7 @@ func getCustomer(w http.ResponseWriter, r *http.Request) {
 	var ok bool
 
 	if idStr, ok = mux.Vars(r)["id"]; !ok {
-		w.WriteHeader(http.StatusInternalServerError)
+		w.WriteHeader(http.StatusNotFound)
 		return
 	}
 	// Search for customer with input ID
@@ -95,7 +95,7 @@ func addCustomer(w http.ResponseWriter, r *http.Request) {
 	customers = append(customers, newCustomer)
 	nextID += 1
 
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(customers)
 }
 
@@ -142,7 +142,7 @@ func deleteCustomer(w http.ResponseWriter, r *http.Request) {
 	var idStr string
 	var ok bool
 	if idStr, ok = mux.Vars(r)["id"]; !ok {
-		w.WriteHeader(http.StatusInternalServerError)
+		w.WriteHeader(http.StatusNotFound)
 		return
 	}
 	id, _ := strconv.Atoi(idStr)
