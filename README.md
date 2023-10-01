@@ -1,6 +1,10 @@
 # CRM Backend API
 
-## This project starts a http server that provides API to manage customers with CRUD operations
+### This project starts a http server that provides API to manage customers with CRUD operations
+
+### Instructions to run http server
+- Navigate to directory where *main.go* is in.
+- Run `go run main.go` to start the server running
 
 ### API endpoints
 - Get all customers: `GET /customers`
