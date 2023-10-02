@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <meta charset="UTF-8">
+            <title>Page Title</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+        </style>
+        <script src=""></script>
+        <body>
+            <h1>CRM Backend API</h1>
+            <h2>Endpoints</h2>
+            <ol>
+                <li>
+                    <strong>Get all customers</strong>: GET /customers
+                </li>
+                <li>
+                    <strong>Get customer by ID</strong>: `GET /customers/{id}`
+                </li>
+                <li>
+                    <strong>Add new customer</strong>: `POST /customers`
+                    <br/>
+                    Body: { 'name': '{newName}', 'role': '{newRole}', 'email': '{newEmail}' }
+                </li>
+                <li>
+                    <strong>Update customer by ID</strong>: `PATCH /customers/{id}`
+                    <br/>
+                    Body: { 'name': '{newName}', 'role': '{newRole}', 'email': '{newEmail}', 'contacted': 'true/false' }
+                </li>
+                <li>
+                    <strong>Delete customer by ID</strong>: `DELETE /customers/{id}`
+                </li>
+            </ol>
+            <p>This is a paragraph.</p>
+            <p>This is another paragraph.</p>
+        </body>
+    </html>

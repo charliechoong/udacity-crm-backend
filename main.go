@@ -39,7 +39,8 @@ var customers = []*model.Customer{
 
 var nextID = 4
 
-func index(w http.ResponseWriter, _ *http.Request) {
+func index(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "static/index.html")
 	fmt.Fprintf(w, "http server provide backend api for CRM")
 }
 
